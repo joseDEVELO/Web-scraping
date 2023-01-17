@@ -35,8 +35,8 @@ tituloH1 = sopa.find("h1", class_="product-heading__title").text
 # <span>$3.192.000 COP</span>
 # <span>$3.360.000 COP</span>
 # </h2>
-precioRebajado = sopa.find("h2", class_="product-heading__pricing product-heading__pricing--has-discount").find_all("span")
-precioAnterior = sopa.find("h2", class_="product-heading__pricing product-heading__pricing--has-discount").find_all("span")[1]
+precioRebajado = sopa.find("h2", class_="product-heading__pricing product-heading__pricing--has-discount").find_all("span")[0].text
+precioAnterior = sopa.find("h2", class_="product-heading__pricing product-heading__pricing--has-discount").find_all("span")[1].text
 
 # Obteniendo la imagen del producto 
 imagen = sopa.find(class_="product-gallery__image").attrs.get("src")
